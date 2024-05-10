@@ -16,7 +16,7 @@ const JobDetails = () => {
     try {
       setLoading(true)
     axios
-      .get(`http://localhost:4000/api/v1/job/${id}`, {
+      .get(`https://job-portal-api.up.railway.app/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {

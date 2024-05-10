@@ -42,7 +42,7 @@ const Application = () => {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/application/post",
+        "https://job-portal-api.up.railway.app/api/v1/application/post",
         formData,
         {
           withCredentials: true,

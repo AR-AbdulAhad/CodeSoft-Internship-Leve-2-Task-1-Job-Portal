@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "z/api/v1/user/login",
+        "https://job-portal-api.up.railway.app/api/v1/user/login",
         { email, password, role },
         {
           headers: {

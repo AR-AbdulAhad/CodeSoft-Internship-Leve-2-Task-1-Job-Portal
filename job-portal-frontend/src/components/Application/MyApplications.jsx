@@ -22,7 +22,7 @@ const MyApplications = () => {
       if (user && user.role === "Employer") {
         setLoading(true);
         axios
-        .get("http://localhost:4000/api/v1/application/employer/getall", {
+        .get("https://job-portal-api.up.railway.app/api/v1/application/employer/getall", {
           withCredentials: true,
         })
         .then((res) => {
@@ -31,7 +31,7 @@ const MyApplications = () => {
       } else {
         setLoading(true);
         axios
-          .get("http://localhost:4000/api/v1/application/jobseeker/getall", {
+          .get("https://job-portal-api.up.railway.app/api/v1/application/jobseeker/getall", {
             withCredentials: true,
           })
           .then((res) => {
@@ -60,7 +60,7 @@ const MyApplications = () => {
     setShowConfirmDelete(false); 
     try {
       axios
-        .delete(`http://localhost:4000/api/v1/application/delete/${deleteApplicationId}`, {
+        .delete(`https://job-portal-api.up.railway.app/api/v1/application/delete/${deleteApplicationId}`, {
           withCredentials: true,
         })
         .then((res) => {

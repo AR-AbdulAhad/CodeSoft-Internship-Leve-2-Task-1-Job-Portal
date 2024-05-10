@@ -11,7 +11,7 @@ const CountSection = () => {
     }, []);
 
     const fetchCounts = () => {
-        fetch('http://localhost:4000/api/v1/user/getusercounts')
+        fetch('https://job-portal-api.up.railway.app/api/v1/user/getusercounts')
             .then(response => response.json())
             .then(data => {
                 animateCount(setEmployersCount, data.employerCount);
@@ -19,14 +19,14 @@ const CountSection = () => {
             })
             .catch(error => console.error('Error fetching user counts:', error));
 
-        fetch('http://localhost:4000/api/v1/job/getavailablejobscount')
+        fetch('https://job-portal-api.up.railway.app/api/v1/job/getavailablejobscount')
             .then(response => response.json())
             .then(data => {
                 animateCount(setAvailableJobsCount, data.availableJobsCount);
             })
             .catch(error => console.error('Error fetching available jobs count:', error));
 
-        fetch('http://localhost:4000/api/v1/application/applicationcount')
+        fetch('https://job-portal-api.up.railway.app/api/v1/application/applicationcount')
             .then(response => response.json())
             .then(data => {
                 animateCount(setApplicationCount, data.applicationCount);
