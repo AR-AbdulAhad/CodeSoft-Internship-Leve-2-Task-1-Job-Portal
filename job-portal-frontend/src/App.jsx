@@ -21,7 +21,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://job-portal-api.up.railway.app/api/v1/user/getuser",
+          "https://job-portal-nodejs-api.vercel.app/api/v1/user/getuser",
           {
             withCredentials: true,
           }
