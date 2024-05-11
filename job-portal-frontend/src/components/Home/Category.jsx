@@ -78,7 +78,7 @@ const Category = () => {
 
   const getAllJobs = async () => {
     try {
-      const response = await axios.get("https://job-portal-api.up.railway.app/api/v1/job/getall", {
+      const response = await axios.get("https://job-portal-nodejs-api.vercel.app/api/v1/job/getall", {
         withCredentials: true,
       });
       const jobs = response.data.jobs;
