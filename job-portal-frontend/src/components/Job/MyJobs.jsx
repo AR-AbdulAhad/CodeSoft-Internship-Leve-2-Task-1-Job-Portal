@@ -26,7 +26,7 @@ const MyJobs = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "https://job-portal-api.up.railway.app/api/v1/job/getmyjobs",
+          "https://job-portal-nodejs-api.vercel.app/api/v1/job/getmyjobs",
           { withCredentials: true }
         );
         setMyJobs(response.data.myJobs);
@@ -66,7 +66,7 @@ const MyJobs = () => {
     const updatedJob = myJobs.find((job) => job._id === doneJobId);
     try {
       const res = await axios.put(
-        `https://job-portal-api.up.railway.app/api/v1/job/update/${doneJobId}`,
+        `https://job-portal-nodejs-api.vercel.app/api/v1/job/update/${doneJobId}`,
         updatedJob,
         { withCredentials: true }
       );
@@ -86,7 +86,7 @@ const MyJobs = () => {
     setShowConfirmDelete(false);
     try {
       const res = await axios.delete(
-        `https://job-portal-api.up.railway.app/api/v1/job/delete/${deleteJobId}`,
+        `https://job-portal-nodejs-api.vercel.app/api/v1/job/delete/${deleteJobId}`,
         { withCredentials: true }
       );
       toast.success(res.data.message);
