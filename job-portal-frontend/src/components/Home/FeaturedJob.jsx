@@ -37,7 +37,7 @@ const FeaturedJob = () => {
   useEffect(() => {
     try {
       axios
-        .get("https://job-portal-api.up.railway.app/api/v1/job/getall", {
+        .get("https://job-portal-nodejs-api.vercel.app/api/v1/job/getall", {
           withCredentials: true,
         })
         .then((res) => {
