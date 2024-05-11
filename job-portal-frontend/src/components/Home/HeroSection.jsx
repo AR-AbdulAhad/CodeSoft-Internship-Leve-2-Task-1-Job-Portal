@@ -5,7 +5,7 @@ const HeroSection = () => {
   const [availableJobsCount, setAvailableJobsCount] = useState(0);
 
   useEffect(() => {
-      fetch('https://job-portal-api.up.railway.app/api/v1/job/getavailablejobscount')
+      fetch('https://job-portal-nodejs-api.vercel.app/api/v1/job/getavailablejobscount')
       .then(response => response.json())
       .then(data => {
           setAvailableJobsCount(data.availableJobsCount);
