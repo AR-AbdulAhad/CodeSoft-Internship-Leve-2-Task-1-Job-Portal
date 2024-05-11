@@ -16,7 +16,7 @@ const JobDetails = () => {
     try {
       setLoading(true)
     axios
-      .get(`https://job-portal-api.up.railway.app/api/v1/job/${id}`, {
+      .get(`https://job-portal-nodejs-api.vercel.app/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {
