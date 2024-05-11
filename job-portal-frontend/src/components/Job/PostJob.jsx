@@ -43,7 +43,7 @@ const PostJob = () => {
   
     try {
       const response = await axios.post(
-        "https://job-portal-api.up.railway.app/api/v1/job/post",
+        "https://job-portal-nodejs-api.vercel.app/api/v1/job/post",
         fixedSalary.length >= 4
           ? {
               title,
